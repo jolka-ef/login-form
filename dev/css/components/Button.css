@@ -1,0 +1,14 @@
+.Button {
+  background-color: var(--bg-element-color);
+  border: var(--border-width) var(--border-color) solid;
+  border-radius: var(--border-radius);
+  color: inherit;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+  transition: all .2s var(--quantum-easing);
+    &:--enter {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: var(--text-color-flip);
+    }
+}

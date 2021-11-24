@@ -1,0 +1,30 @@
+<form class="Form Form--novalidate" id="loginForm">
+
+  <header class="Form-header">
+    <img class="Form-avatar" src="./img/face.svg" alt="User photo">
+    <h1 class="VisuallyHidden">Login</h1>
+  </header>
+
+  <div class="Form-content">
+
+    <label class="InputLabel" for="email">Email	address</label>
+    <div class="InputContainer">
+      <input required class="Input" defaultValue=""  id="email" name="email" type="email"
+             pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+      <span class="InputErrMsg" hidden>Enter your email address</span>
+      {% include '_requiredTooltip.html'%}
+    </div>
+
+    {% include '_password.html' %}
+
+    <input class="VisuallyHidden" type="checkbox" id="checkbox" name="rememberUser">
+    <label class="CheckboxLabel" for="checkbox">Remember me</label>
+
+  </div>
+
+  <div class="Form-actions">
+    <button class="Button" id="loginButton" type="submit">Login</button>
+    <a class="Link" href="#resetForm">Forgotten password?</a>
+  </div>
+
+</form>

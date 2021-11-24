@@ -1,0 +1,40 @@
+.CancelLink {
+  background-color: var(--bg-element-color);
+  border: var(--border-width) var(--accent-color-blunt) solid;
+  border-radius: var(--border-radius);
+  color: var(--accent-color-blunt);
+  margin-right: auto;
+  padding: 1em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s var(--quantum-easing);
+
+  &:--enter {
+    background-color: var(--accent-color-blunt);
+    color: var(--text-color-flip);
+  }
+}
+
+.Link {
+  border-radius: var(--border-radius);
+  color: var(--accent-color);
+  margin: 1em;
+  padding: .25em;
+  text-align: center;
+  text-decoration: underline;
+
+  &:--enter {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color-flip);
+    outline: none;
+  }
+}
+
+@media (--break-sm) {
+  .CancelLink {
+    margin: 1rem 0;
+
+  }
+}

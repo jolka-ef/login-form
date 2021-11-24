@@ -1,0 +1,32 @@
+<form class="Form Form--hidden Form--novalidate" id="resetForm">
+
+  <header class="Form-header LoginForm-header">
+    <img class="Form-avatar" src="./img/face.svg" alt="User photo">
+    <h1 class="Form-heading">Reset password</h1>
+  </header>
+
+  <div class="Form-content">
+
+    <p class="Form-paragraph">
+      Hey, it happens to everyone.
+      Just let us know what email address you use to login and
+      we'll send you an email with instructions.
+    </p>
+
+
+    <label class="InputLabel" for="emailReset">Email address</label>
+    <div class="InputContainer">
+      <input required class="Input" defaultValue=""  id="emailReset" name="email" type="email"
+             pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+      <span class="InputErrMsg" hidden>Enter email address</span>
+      {% include '_requiredTooltip.html'%}
+    </div>
+
+  </div>
+
+  <div class="Form-actions">
+    <button class="Button" id="resetButton"> Reset password </button>
+    <a class="CancelLink" href="#loginForm">Cancel</a>
+  </div>
+
+</form>

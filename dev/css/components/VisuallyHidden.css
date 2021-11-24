@@ -1,0 +1,9 @@
+.VisuallyHidden {
+  clip-path: circle(0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  white-space: nowrap;
+  width: 1px;
+}

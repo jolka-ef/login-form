@@ -1,0 +1,27 @@
+:root {
+  --text-color: #666;
+  --text-color-flip: #fff;
+  --accent-color: #3a71ac;
+  --accent-color-blunt : #cc0849;
+
+  --bg-element-color: #fff;
+
+  --border-color: #d4ccc4;
+  --border-radius: 5px;
+  --border-width: 1px;
+
+
+  --tooltip-size: 8px;
+  --tooltip-distance: 3px;
+
+  --shadow: 0 0 .5em rgba(0,0,0,0.3);
+  --v-gap: 1rem;
+  --quantum-easing: cubic-bezier(.4,0,.2,1);
+
+}
+
+@media (--break-md) {
+  :root {
+    --v-gap: 3rem;
+  }
+}

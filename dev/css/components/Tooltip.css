@@ -1,0 +1,50 @@
+.InputIcon {
+  border-top-right-radius: var(--border-radius);
+  height: 2em;
+  width: 2.5em;
+}
+
+.InputIcon-container {
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  color: var(--accent-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:before {
+    border-color: var(--accent-color) transparent;
+    border-style: solid;
+    border-width: var(--tooltip-size) var(--tooltip-size) 0;
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+    right: var(--tooltip-size);
+    top: calc(-1 * calc(var(--tooltip-size) + var(--tooltip-distance)));
+    transition: opacity .2s var(--quantum-easing);
+    width: 0;
+  }
+
+  &:after {
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius);
+    color: var(--text-color-flip);
+    content: attr(data-tooltip);
+    display: block;
+    opacity: 0;
+    padding: .375em .75em;
+    position: absolute;
+    right: -10px;
+    top: calc(-1 * calc(var(--tooltip-size) + var(--tooltip-distance)));
+    transform: translate3d(0, -100%, 0);
+    transition: opacity .2s var(--quantum-easing);
+  }
+
+  &:--enter {
+    clip-path: none;
+  }
+}
+
+.InputIcon-container:hover:before, .InputIcon-container:hover:after {
+  opacity: 1;
+}

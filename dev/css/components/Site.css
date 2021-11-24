@@ -1,0 +1,10 @@
+.Site-content {
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.Site-contentContainer {
+  padding: 5em 0;
+  position: relative;
+}
+

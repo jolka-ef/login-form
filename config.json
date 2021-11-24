@@ -1,0 +1,6 @@
+{
+  "imgPath": "/img",
+  "publicPath": "/",
+  "publicDir": "public",
+  "repo" : "form"
+}

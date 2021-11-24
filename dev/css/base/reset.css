@@ -1,0 +1,38 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+  font: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--text-color);
+  font: 1em/1.5 system-ui;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+dialog[open] {
+  animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+}
+
+main, header, footer, nav, aside {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 1em 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}

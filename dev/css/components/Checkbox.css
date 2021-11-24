@@ -1,0 +1,31 @@
+input[type=checkbox].VisuallyHidden + label:before{
+  background-color: rgb(229, 229, 229);
+  border: var(--border-color) var(--border-width) solid;
+  border-radius: 5px;
+  content: '';
+  float: left;
+  height: 1.25em;
+  margin-right: .75em;
+  width: 1.25em;
+}
+
+input[type=checkbox].VisuallyHidden:checked + label:before {
+  content: url("data:image/svg+xml, %3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.92,46.04L41.48,73c0,0,22.04-54.78,56.78-73.04C97.41,13,94.02,24.3,99.95,38.21 C84.7,41.69,53.34,80.82,43.17,99.95C28.76,81.69,11.82,67.78-0.05,63.43L27.92,46.04z' fill='%23595959'/%3E%3C/svg%3E");
+}
+
+input[type=checkbox]:--enter + label {
+  background-color: var(--accent-color);
+  color: var(--text-color-flip);
+}
+
+input[type=checkbox]:--enter  + label:before {
+  background-color: var(--text-color-flip);
+}
+
+.CheckboxLabel{
+  border-radius: var(--border-radius);
+  display: inline-block;
+  margin-bottom: .5em;
+  padding: .5em;
+  text-transform: uppercase;
+}

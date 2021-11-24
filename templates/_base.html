@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include '_head.html' %}
+</head>
+
+<body class="Site">
+{% include '_icons.html' %}
+<div  class="Site-contentContainer">
+  <main class="Site-content">
+    {% block content %}
+    {% endblock %}
+  </main>
+</div>
+{% include '_javascript-legacy.html' %}
+</body>
+</html>

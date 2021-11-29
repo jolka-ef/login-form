@@ -39,7 +39,7 @@ and such tools as Gulp and Webpack.
 
 ```sh
 # Clone the git repository and cd into the cloned directory.
-git clone https://jolka-ef.github.io/login-form/
+git clone https://github.com/jolka-ef/login-form.git
 cd project-form
 
 # Install the dependencies

@@ -6,7 +6,7 @@ forms.forEach(form => form.setAttribute('novalidate', ''));
  * Adds event handlers to the document.
  */
 export function init() {
-    document.addEventListener('blur', handleFieldValidation, false);
+    document.addEventListener('blur', handleFieldValidation, true);
     document.addEventListener('submit', handleForm, false);
 }
 
@@ -24,12 +24,10 @@ function handleForm(event) {
         invalidFields.forEach(field => showError(field));
         invalidField.focus();
     } else {
-      const submitter = event.submitter;
-       if(submitter.matches('[id="loginButton"]')) {
+      if(target.getAttribute('id') === 'loginForm') {
         showDialog(document.querySelector('[id="successDialog"]'))
-      }
-      else if(submitter.matches('[id="resetButton"]')) {
-      showDialog(document.querySelector('[id="resetDialog"]'))
+      } else {
+       showDialog(document.querySelector('[id="resetDialog"]'))
     }
   }
 }
@@ -78,10 +76,16 @@ function hideError(target) {
     target.removeAttribute('aria-invalid');
     target.removeAttribute('aria-describedby');
     target.classList.remove('Input--hasError');
-    err.removeAttribute('id');
+
+    if (err) {
+        err.removeAttribute('id');
+    }
 }
 
-
+/**
+ * Show dialog
+ * @param {!Element} dialog
+ */
 function showDialog(dialog){
     if (typeof dialog.showModal === "function") {
     dialog.showModal();
